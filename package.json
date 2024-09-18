@@ -1,25 +1,12 @@
 {
   "name": "unity-ci-self-hosted-common",
   "description": "Unity CI Self Hosted Common",
-  "version": "0.0.0",
-  "author": "",
-  "private": true,
-  "homepage": "https://github.com/marsel-96/unity-ci-self-hosted-common",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/marsel-96/unity-ci-self-hosted-common.git"
-  },
-  "bugs": {
-    "url": "https://github.com/marsel-96/unity-ci-self-hosted-common/issues"
-  },
-  "keywords": [
-    "actions",
-    "node",
-    "setup"
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
   ],
-  "engines": {
-    "node": ">=20"
-  },
   "scripts": {},
   "license": "MIT",
   "dependencies": {
