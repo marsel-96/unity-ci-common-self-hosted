@@ -7,6 +7,7 @@
   "files": [
     "./dist"
   ],
+  "module": "./dist/index.js",
   "scripts": {},
   "license": "MIT",
   "devDependencies": {
