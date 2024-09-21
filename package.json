@@ -8,7 +8,10 @@
     "./dist"
   ],
   "module": "./dist/index.js",
-  "scripts": {},
+  "scripts": {
+    "bundle": "npm run format:write && npm run package",
+    "package": "npx ncc build src/index.ts -o dist --source-map --license licenses.txt"
+  },
   "license": "MIT",
   "devDependencies": {
     "@jest/globals": "^29.7.0",
