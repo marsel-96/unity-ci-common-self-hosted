@@ -1,10 +1,13 @@
 import { spawn } from 'child_process';
+import * as logging from './log';
 
 export async function runCommand(command: string, args: string[]): Promise<number> {
     let child = spawn(command, args)
 
     child.stdout.pipe(process.stdout);
-    child.stderr.pipe(process.stderr);
+    child.stderr.on('data', function(data) {
+        logging.logWithStyle('stderr: ' + data);
+    });
 
     const waitOutputCompletion = new Promise<void>( (resolve, _) => {
         child.stdout.on('end', () => {
